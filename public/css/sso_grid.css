@@ -1,0 +1,13 @@
+.grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 100vh;
+}
+
+.div-1{
+    
+}
+
+.div-2{
+    background-color: blue;
+}
