@@ -1,18 +1,36 @@
 <?php
 session_start();
-include('includes/config.ini.php');
 
-$titulo= "Sistema Sua Oficina";
+require_once('vendor/autoload.php');
 
+use core\bean\OficinaBean;
+use core\vo\OficinaVo;
 
-$smarty->assign("titulo", $titulo);
+/*$verificaAcesso = VerificaPrimeiroAcesso::verificarAcesso();
 
-$smarty->display('default/header.tpl');
+if($verificaAcesso){
+    echo "<script>
+            alert('Primeiro acesso? Você deverá acessar página de cadastro');
+        </script>";
+} else {
+    header('location: public/login.php');
+}*/
 
+$oficina = new OficinaVo;
+$beanOfi = new OficinaBean();
 
-if(!isset($_SESSION)){
-    include("login.php");
+$oficina->__set('nmOficina', 'Oficina Teste');
+$oficina->__set('email', 'oficinateste@teste.com');
+
+$result = $beanOfi->insereRegistro($oficina);
+
+if($result){
+    echo "<script>
+            alert('Oficina Inserida com sucesso');
+        </script>";
 }
 
-$smarty->display('default/footer.tpl');
+
+
+
 

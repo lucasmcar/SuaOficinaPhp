@@ -1,2 +1,4 @@
 /.idea
 /templates_c
+/vendor/
+/.vscode

@@ -1,5 +1,6 @@
 <?php
 
+namespace core\vo;
 /**
  * Classe BaseVo que tras os métodos getters e setters
  */

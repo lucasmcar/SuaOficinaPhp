@@ -1,11 +1,14 @@
 <?php
 
-require('BaseVo.php');
+namespace core\vo;
 
-class OficinaVo extends BaseVo
+use core\vo\BaseVo as Base;
+
+class OficinaVo extends Base
 {
     protected $cdOficina;
     protected $nmOficina;
+    protected $email;
    
     public function __construct()
     { }

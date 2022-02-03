@@ -1,0 +1,15 @@
+{
+    "name": "lukas/sua-oficina",
+    "autoload": {
+        "psr-4": {
+            "core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Devpoa Software",
+            "email": "suporte.devpoa@gmail.com"
+        }
+    ],
+    "require": {}
+}
