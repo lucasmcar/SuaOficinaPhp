@@ -4,17 +4,17 @@ namespace core\vo;
 
 use core\vo\BaseVo as Base;
 
-class OficinaFotoVo extends Base
+class EnderecoOficinaVo extends Base
 {
-    protected $cdFoto;
-    protected $nmfoto;
-    protected $conteudo;
+    protected $cdEnderecoOFicina;
+    protected $logradouro;
+    protected $bairro;
+    protected $nrLogradouro;
     protected $tipo;
-    protected $tamanho;
     protected $cdOficina;
 
     public function __construct()
-    {  
+    {
         
     }
 }

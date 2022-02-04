@@ -2,9 +2,9 @@
 
 namespace core\vo;
 
-use core\vo\BaseVo;
+use core\vo\BaseVo as Base;
 
-class TipoServicoVo extends BaseVo
+class TipoServicoVo extends Base
 {
     protected $cdTipoServico;
     protected $tipoServico;

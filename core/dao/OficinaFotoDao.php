@@ -13,13 +13,13 @@ class OficinaFotoDao
     {
         try {
             $con  = Connection::getConnection();
-            $sql  = "INSERT INTO fotooficina (nome, conteudo, tipo, tamanho, cdusuario) VALUES (:nome, :conteudo, :tipo, :tamanho, :cdusuario);";
+            $sql  = "INSERT INTO fotooficina (nome, conteudo, tipo, tamanho, cdoficina) VALUES (:nome, :conteudo, :tipo, :tamanho, :cdoficina);";
             $stmt = $con->prepare($sql);
             $stmt->bindValue(':nome', $oficinaFotoVo->__get('nmfoto'));
             $stmt->bindValue(':conteudo', $oficinaFotoVo->__get('conteudo'));
             $stmt->bindValue(':tipo', $oficinaFotoVo->__get('tipo'));
             $stmt->bindValue(':tamanho', $oficinaFotoVo->__get('tamanho'));
-            $stmt->bindValue(':cdusuario', $oficinaFotoVo->__get('cdUsuario'));
+            $stmt->bindValue(':cdoficina', $oficinaFotoVo->__get('cdOficina'));
             return $stmt->execute();
                 
         } catch (PDOException $ex) {

@@ -1,13 +1,14 @@
 .grid{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
-.div-1{
-    
+.foto-wrapper{
+    height: 100%;
+    width: 100%;
 }
 
-.div-2{
+.login-wrapper{
     background-color: blue;
 }
