@@ -2,7 +2,7 @@
 
 namespace core\dao;
 
-use core\vo\OficinaVo;
+use core\vo\oficina\OficinaVo;
 use core\connection\Connection;
 use PDOException;
 

@@ -3,7 +3,7 @@
 namespace core\dao;
 
 use core\connection\Connection;
-use core\vo\TipoServicoVo;
+use core\vo\oficina\TipoServicoVo;
 use PDOException;
 
 class TipoServicoDao

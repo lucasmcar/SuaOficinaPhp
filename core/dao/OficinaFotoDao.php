@@ -3,7 +3,7 @@
 
 namespace core\dao;
 
-use core\vo\OficinaFotoVo;
+use core\vo\oficina\OficinaFotoVo;
 use core\connection\Connection;
 use PDOException;
 

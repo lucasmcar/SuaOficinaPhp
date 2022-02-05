@@ -3,7 +3,11 @@
     "autoload": {
         "psr-4": {
             "core\\": "core/"
-        }
+        },
+        "files": [
+            "config/configcon.php"
+
+        ]
     },
     "authors": [
         {
@@ -11,5 +15,7 @@
             "email": "suporte.devpoa@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "pecee/simple-router": "4.3.7.2"
+    }
 }

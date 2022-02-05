@@ -16,7 +16,7 @@
     <div class="grid">
 
         <div class="foto-wrapper">
-            <img src="imagem/logo-default.png">
+            
         </div> 
         <div class="login-wrapper">
             <form method="post" action="../core/tratamentos//trata_cadastrooficina.php">

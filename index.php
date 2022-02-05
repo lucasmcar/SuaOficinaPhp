@@ -3,8 +3,9 @@ session_start();
 
 require_once('vendor/autoload.php');
 
+use core\connection\Connection;
 use core\bean\OficinaBean;
-use core\vo\OficinaVo;
+use core\vo\oficina\OficinaVo;
 
 /*$verificaAcesso = VerificaPrimeiroAcesso::verificarAcesso();
 
@@ -31,6 +32,6 @@ if($result){
 }
 
 
-
+var_dump(Connection::getConnection());
 
 

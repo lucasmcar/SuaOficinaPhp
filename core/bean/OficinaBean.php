@@ -2,7 +2,7 @@
 
 namespace core\bean;
 
-use core\vo\OficinaVo;
+use core\vo\oficina\OficinaVo;
 use core\dao\OficinaDao;
 
 class OficinaBean

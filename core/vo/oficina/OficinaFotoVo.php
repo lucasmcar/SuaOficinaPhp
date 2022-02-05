@@ -1,7 +1,6 @@
 <?php
 
-namespace core\vo;
-
+namespace core\vo\oficina;
 use core\vo\BaseVo as Base;
 
 class OficinaFotoVo extends Base
