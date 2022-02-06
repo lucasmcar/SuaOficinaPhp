@@ -1,6 +1,6 @@
 <?php
 
-namespace core\dao;
+namespace core\dao\oficina;
 
 use core\vo\oficina\OficinaVo;
 use core\connection\Connection;
@@ -11,12 +11,16 @@ class OficinaDao
     public function insert(OficinaVo $vo)
     {
         try{
-            $sql = "INSERT INTO oficina (nmoficina, email) VALUES (:nmoficina, :email)";
+            $sql = "INSERT INTO oficina (nmoficina, email, cnpj) VALUES (:nmoficina, :email, :cnpj)";
             $con = Connection::getConnection();
             $stmt = $con->prepare($sql);
             $stmt->bindValue(':nmoficina', $vo->__get('nmOficina'));
             $stmt->bindValue(':email', $vo->__get('email'));
-            return $stmt->execute();
+            $stmt->bindValue(':cnpj', $vo->__get('cnpj'));
+            $result = $stmt->execute(); 
+            if($result){
+                return true;
+            }
         } catch(PDOException $ex) {
 
         }

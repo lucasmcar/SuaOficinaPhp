@@ -1,7 +1,7 @@
 <?php
 
 
-namespace core\dao;
+namespace core\dao\oficina;
 
 use core\vo\oficina\OficinaFotoVo;
 use core\connection\Connection;

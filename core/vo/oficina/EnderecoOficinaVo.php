@@ -12,6 +12,8 @@ class EnderecoOficinaVo extends Base
     protected $nrLogradouro;
     protected $tipo;
     protected $cdOficina;
+    protected $cdCidade;
+
 
     public function __construct()
     {

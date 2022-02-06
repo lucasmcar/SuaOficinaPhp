@@ -1,6 +1,6 @@
 <?php
 
-namespace core\dao;
+namespace core\dao\oficina;
 
 use core\connection\Connection;
 use core\vo\oficina\TipoServicoVo;

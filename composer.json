@@ -3,11 +3,7 @@
     "autoload": {
         "psr-4": {
             "core\\": "core/"
-        },
-        "files": [
-            "config/configcon.php"
-
-        ]
+        }
     },
     "authors": [
         {

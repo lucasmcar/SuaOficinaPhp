@@ -17,21 +17,5 @@ if($verificaAcesso){
     header('location: public/login.php');
 }*/
 
-$oficina = new OficinaVo;
-$beanOfi = new OficinaBean();
 
-$oficina->__set('nmOficina', 'Oficina Teste');
-$oficina->__set('email', 'oficinateste@teste.com');
-
-$result = $beanOfi->insereRegistro($oficina);
-
-if($result){
-    echo "<script>
-            alert('Oficina Inserida com sucesso');
-        </script>";
-}
-
-
-var_dump(Connection::getConnection());
-
-
+?>
