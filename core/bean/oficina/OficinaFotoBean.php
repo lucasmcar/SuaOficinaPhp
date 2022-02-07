@@ -3,7 +3,7 @@
 namespace core\bean;
 
 use core\vo\oficina\OficinaFotoVo;
-use core\dao\OficinaFotoDao;
+use core\dao\oficina\OficinaFotoDao;
 
 class OficinaFotoBean
 {

@@ -24,7 +24,5 @@ class OficinaDao
         } catch(PDOException $ex) {
 
         }
-        
-        
     }
 }
