@@ -22,7 +22,11 @@ class OficinaDao
                 return true;
             }
         } catch(PDOException $ex) {
-
+            $this->arrayError = [
+                'error_msg' => $ex->getMessage(),
+                'error_code' => $ex->getCode()
+            ];
+            return json_encode($this->arrayError);
         }
     }
 }
