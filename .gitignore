@@ -2,5 +2,4 @@
 /templates_c
 /vendor/
 /.vscode
-/core/connection/configcon.php
-/core/connection/Connection.php
+/core/connection
