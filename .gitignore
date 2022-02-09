@@ -2,4 +2,4 @@
 /templates_c
 /vendor/
 /.vscode
-/core/connection
+env.ini

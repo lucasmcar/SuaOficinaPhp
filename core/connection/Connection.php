@@ -2,7 +2,7 @@
 
 namespace core\connection;
 
-require_once('configcon.php');
+use core\connection\ConfigConnection;
 use PDO;
 use PDOException;
 
@@ -13,9 +13,14 @@ class Connection
     public static function getConnection(){
 
         self::$instance = null;
-        
+        $arrayConnectionData = ConfigConnection::setConfigConnection("env.ini");
         try{
-            self::$instance = new PDO('mysql:host=localhost;dbname='.BD, USER, PASS);
+            self::$instance = new PDO(
+                'mysql:host='.$arrayConnectionData['host'].';
+                 port='.($arrayConnectionData['dbport'] == '' ? '3306' : null).';
+                 dbname='.$arrayConnectionData['database'], 
+                 $arrayConnectionData['user'], 
+                 $arrayConnectionData['password']);
             self::$instance->setAttribute(PDO::ERRMODE_EXCEPTION, PDO::ATTR_ERRMODE);
             return self::$instance;
         } catch(PDOException $ex){

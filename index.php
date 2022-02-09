@@ -17,5 +17,6 @@ if($verificaAcesso){
     header('location: public/login.php');
 }*/
 
+echo Connection::getConnection();
 
 ?>
