@@ -17,7 +17,7 @@ class Connection
         try{
             self::$instance = new PDO(
                 'mysql:host='.$arrayConnectionData['host'].';
-                 port='.($arrayConnectionData['dbport'] == '' ? '3306' : null).';
+                 port='.$arrayConnectionData['dbport'].';
                  dbname='.$arrayConnectionData['database'], 
                  $arrayConnectionData['user'], 
                  $arrayConnectionData['password']);
