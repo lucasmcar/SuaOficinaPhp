@@ -19,7 +19,7 @@
             
         </div> 
         <div class="login-wrapper">
-            <form method="post" action="../core/tratamentos//trata_cadastrooficina.php">
+            <form method="post" action="">
                 <input type="text" name="nmuser">
                 <input type="password" name="passuser">
                 <button type="submit">enviar</button>

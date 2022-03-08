@@ -3,6 +3,7 @@
     "autoload": {
         "psr-4": {
             "core\\": "core/"
+            
         }
     },
     "authors": [
@@ -12,6 +13,8 @@
         }
     ],
     "require": {
-        "pecee/simple-router": "4.3.7.2"
+        "pecee/simple-router": "4.3.7.2",
+        "picqer/php-barcode-generator": "^2.2",
+        "dompdf/dompdf": "^1.2"
     }
 }

@@ -3,9 +3,25 @@ session_start();
 
 require_once('vendor/autoload.php');
 
+date_default_timezone_set('AMERICA/SAO_PAULO');
+
 use core\connection\Connection;
 use core\bean\OficinaBean;
 use core\vo\oficina\OficinaVo;
+use Picqer\Barcode\BarcodeGeneratorHTML;
+use Picqer\Barcode\BarcodeGeneratorPNG;
+
+$generator = new BarcodeGeneratorPNG();
+$barcode = $generator->getBarcode('1234567', $generator::TYPE_CODE_128);
+
+
+$imgBase64 = base64_encode($barcode);
+
+
+file_put_contents('public/imagem/barcode'.date('d_m_Y_H_i').'.png', $barcode);
+
+
+
 
 /*$verificaAcesso = VerificaPrimeiroAcesso::verificarAcesso();
 
