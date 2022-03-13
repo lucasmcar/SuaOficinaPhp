@@ -10,7 +10,7 @@ use core\bean\OficinaBean as OBean;
 
 use core\tratamentos\validacoes\TrataCampos;
 
-$nmoficina   = filter_input(INPUT_POST, 'nmuser', FILTER_SANITIZE_STRING);
+$nmoficina   = filter_input(INPUT_POST, 'nmuser', FILTER_UNSAFE_RAW);
 $email       = filter_input(INPUT_POST, 'nmoficina');
 $tiposervivo = filter_input(INPUT_POST, 'tipo');
 

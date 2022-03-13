@@ -14,7 +14,6 @@
 <body>
     
     <div class="grid">
-
         <div class="foto-wrapper">
             
         </div> 
