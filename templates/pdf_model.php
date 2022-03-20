@@ -21,6 +21,7 @@ $random = Random::generateRandomCode();
             font-family: Arial, Helvetica, sans-serif;
             padding: 0;
             margin: 0;
+            font-weight: 200;
             list-style: none;
         }
         .pdf-container{

@@ -1,5 +1,12 @@
+
+env.ini
+
+#pastas
+
+/bar
 /.idea
 /templates_c
 /vendor/
 /.vscode
-env.ini
+teste.php
+testechart.php

@@ -11,7 +11,7 @@ $mPdf = new Dompdf();
 ob_start();
 require_once('../templates/pdf_model.php');
 $mPdf->loadHtml(ob_get_clean());
-
+$mPdf->setBasePath('../../templates/css/bootstrap.min.css');
 
 $mPdf->setPaper("A4");
 
