@@ -8,9 +8,11 @@ use core\vo\BaseVo;
 
 class TempoServicoVo extends BaseVo
 {
+    protected $cdTempoServico;
     protected $dtInicial;
     protected $previsao;
     protected $dtFinal;
+    protected $cdServico;
 
     public function __construct()
     {
