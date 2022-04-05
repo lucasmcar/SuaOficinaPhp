@@ -19,4 +19,12 @@ class EnderecoOficinaVo extends Base
     {
         
     }
+
+
+
+
+
+
+
+
 }
