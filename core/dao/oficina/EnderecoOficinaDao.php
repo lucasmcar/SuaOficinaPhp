@@ -38,7 +38,7 @@ class EnderecoOficinaDao
         try{
             $sql = "SELECT * FROM endereco_oficina";
             $con = Connection::getConnection();
-            $stmt = $con->prepare($sql);
+            $stmt = $con->prepare($sql)->fetch();
             $result = $stmt->execute(); 
             if($result){
                 return true;
@@ -52,19 +52,22 @@ class EnderecoOficinaDao
         }
     }
 
-    public function udpate(EnderecoOficinaVo $vo, $id)
+    public function udpate($id)
     {
         try{
-            $sql = "UPDATE endereco_oficina SET (logradouro, bairro, nrlogradouro, tipo, cdoficina, cdcidade) VALUES (:logradouro, :bairro, :nrlogradouro, :tipo, :cdoficina, :cdcidade) WHERE (cdEnderecoOFicina) VALUES (:$id)";
+            $dados = [
+                'logradouro' => $_REQUEST['logradouro'],
+                'bairro' => $_REQUEST['$bairro'],
+                'nrlogradouro' => $_REQUEST['$nrlogradouro'],
+                'tipo' => $_REQUEST['$tipo'],
+                'cdoficina' => $_REQUEST['$cdoficina'],
+                'cdcidade' => $_REQUEST['$cdcidade']
+            ];
+
+            $sql = "UPDATE endereco_oficina SET logradouro=:logradouro, bairro=:bairro, nrlogradouro=:nrlogradouro, tipo=:tipo, cdoficina=:cdoficina, cdcidade=:cdcidade WHERE cdEnderecoOFicina=:$id";
             $con = Connection::getConnection();
             $stmt = $con->prepare($sql);
-            $stmt->bindValue(':logradouro', $vo->__get('logradouro'));
-            $stmt->bindValue(':bairro', $vo->__get('bairro'));
-            $stmt->bindValue(':nrlogradouro', $vo->__get('nrlogradouro'));
-            $stmt->bindValue(':tipo', $vo->__get('tipo'));
-            $stmt->bindValue(':cdoficina', $vo->__get('cdoficina'));
-            $stmt->bindValue(':cdcidade', $vo->__get('cdcidade'));
-            $result = $stmt->execute(); 
+            $result = $stmt->execute($dados); 
             if($result){
                 return true;
             }
@@ -80,10 +83,10 @@ class EnderecoOficinaDao
     public function delete($id)
     {
         try{
-            $sql = "DELETE FROM endereco_oficina WHERE (cdEnderecoOFicina) VALUES (:$id)";
+            $sql = "DELETE FROM endereco_oficina WHERE cdEnderecoOFicina=?";
             $con = Connection::getConnection();
             $stmt = $con->prepare($sql);
-            $result = $stmt->execute(); 
+            $result = $stmt->execute([$id]); 
             if($result){
                 return true;
             }
